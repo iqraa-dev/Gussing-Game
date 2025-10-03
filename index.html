@@ -62,6 +62,14 @@
 
   attempt++;
   attemptsLeft.textContent = limitedA - attempt;
+
+      if (attempt >= limitedA) {   // step 1: check if attempts finished
+  if (user !== randomNum) {  // step 2: check if guess is still wrong
+    result.textContent = "Game Over! The Secret number was"+ randomNum;
+    document.getElementById("userInput").disabled = true;
+  }
+}
+
 }
 
 </script>
